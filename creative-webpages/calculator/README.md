@@ -1,4 +1,4 @@
-## Garment Shop
+## Calculator
 
 ### Note Internet is required to view the time table. As the time table CSS is fetched from Bootstrap CDN.
 
@@ -6,12 +6,12 @@ Below is the image of Garment Webpage.
 
 Home Page
 
-![Time Table](./home.png)
+![Time Table](./image.png)
 
-Contact Page
+Input Page
 
-![Time Table](./contact.png)
+![Time Table](./input.png)
 
-Product Page
+Output Page
 
-![Time Table](./products.png)
+![Time Table](./output.png)

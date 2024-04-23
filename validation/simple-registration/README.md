@@ -1,4 +1,4 @@
-## Facebook Registration
+## Simple Registration Form
 
 ### Note Internet is required to view the Validation Form. As the Validation Form CSS is fetched from Bootstrap CDN.
 
