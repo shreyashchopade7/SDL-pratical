@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Registration</title>
+    <style>
+      /* Some basic styling for the form */
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .error {
+        color: red;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registrationForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <span id="usernameError" class="error"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <span id="passwordError" class="error"></span>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+      />
+      <span id="confirmPasswordError" class="error"></span>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Fetch input values
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          var confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          // Reset errors
+          document.getElementById("usernameError").textContent = "";
+          document.getElementById("passwordError").textContent = "";
+          document.getElementById("confirmPasswordError").textContent = "";
+
+          // Validate username
+          if (username.length < 6) {
+            document.getElementById("usernameError").textContent =
+              "Username must be at least 6 characters long.";
+            return;
+          }
+
+          // Validate password
+          if (password.length < 8) {
+            document.getElementById("passwordError").textContent =
+              "Password must be at least 8 characters long.";
+            return;
+          }
+
+          // Validate confirm password
+          if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").textContent =
+              "Passwords do not match.";
+            return;
+          }
+
+          // If all validation passes, you can submit the form here
+          alert("Form submitted successfully!");
+        });
+    </script>
+  </body>
+</html>
