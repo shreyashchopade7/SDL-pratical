@@ -2,3 +2,5 @@
 
 ## Table of Contents
 - [Form Validation using bootstrap](./facebook-registration)
+- [Simple Form Validation](./simple-registration)
+- [Simple Form Validation using Bootstrap](./simple-registration-using-bootstrap)
