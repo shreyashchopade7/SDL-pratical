@@ -2,4 +2,4 @@
 
 ## Table of Contents
 - [TY Time Table](./Ty-time-table)
-- [Railway Time Table](./Railway-time-table)
+- [Railway Time Table](./railway-time-table)
